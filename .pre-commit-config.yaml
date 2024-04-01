@@ -1,0 +1,20 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+  - repo: https://github.com/psf/black
+    hooks: v24.3.0
+      - id: black
+        language_version: python3
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.5.4
+    hooks:
+      - id: isort
+        additional_dependencies: ["isort==5.5.4"]
+  - repo: https://github.com/pre-commit/mirrors-flake8
+    rev: v4.0.0
+    hooks:
+      - id: flake8
+        args: [--max-line-length=88]  # Adjust as needed

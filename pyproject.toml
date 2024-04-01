@@ -1,0 +1,11 @@
+[tool.coverage.run]
+command_line = "-m unittest discover -s tests/"
+source = ["src"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:"
+]
+
+[tool.coverage.thresholds]
+fail_under = 80
